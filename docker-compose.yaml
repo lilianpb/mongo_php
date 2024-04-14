@@ -16,3 +16,12 @@ services:
     volumes:
       - ./:/var/www/html
       - ./etc/php/php.ini:/usr/local/etc/php/php.ini
+
+  mongo:
+    container_name: mongo-db
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
