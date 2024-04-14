@@ -1,0 +1,12 @@
+{
+    "name": "mario/mongo_php",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "php": "8.1.*",
+        "mongodb/mongodb": "1.18.*"
+    }
+}
