@@ -6,8 +6,11 @@ $bulk->insert(['_id' => 1, 'name' => 'kity', 'age' => '3']);
 $bulk->insert(['_id' => 2, 'name' => 'kity', 'age' => '3']);
 
 
-$bulk->update(['name' => 'kity'], ['$set' => ['age' => '5']], ['multi' => false, 'upsert' => true]);
 
+$bulk->update(['name' => 'Colita'], ['$set' => ['age' => '5']], ['multi' => false, 'upsert' => true]);
+//el $upsert si está a true lo que hace es si no existe entonces lo crea si está false no hace nada
+//el multi es para que solo afecte a un registro si esta false, si está a true afecta a todos
+//$set este es el operador de actualiza si existe o crea si no estiste
 
 /*
 $bulk->insert(['_id' => 1, 'x' => 1]);
